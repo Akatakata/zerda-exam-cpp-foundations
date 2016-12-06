@@ -5,6 +5,5 @@ F16::F16() : Aircraft() {
   max_ammo = 8;
 }
 
-
 F16::~F16() {
 }

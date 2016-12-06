@@ -5,11 +5,14 @@
 class Aircraft {
 protected:
   int ammo_amount;
-  unsigned int max_ammo;
+  int max_ammo;
   unsigned int base_damage;
 public:
   Aircraft();
   ~Aircraft();
+  void reset_ammo_amount();
+  int fight();
+  void refill(int& ammo_in_storage);
 };
 
 #endif
