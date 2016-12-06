@@ -19,6 +19,7 @@ public:
   int get_total_damage();
   void shoot();
   void fight(Carrier& carrier_to_fight);
+  int get_health_point();
   void get_status();
 };
 

@@ -7,7 +7,10 @@ Carrier::Carrier(int ammo_to_store, int initial_health_point) {
   health_point = initial_health_point;
 }
 
-Carrier::~Carrier() { // DECONSTRUCT VECTOR ELEMENTS
+Carrier::~Carrier() { 
+  for (int i = 0; i < carried_aircrafts.size(); i++) {
+    delete carried_aircrafts[i];
+  }
 }
 
 void Carrier::add_aircraft(std::string type) {
@@ -39,18 +42,25 @@ void Carrier::shoot() {
 }
 
 void Carrier::fight(Carrier& carrier_to_fight) {
-  while (ammo_storage > 0) {
+  while (ammo_storage > 0 && carrier_to_fight.get_health_point() > 0) {
     fill();
     carrier_to_fight.health_point -= get_total_damage();
     shoot();
   }
 }
 
+int Carrier::get_health_point() {
+  return health_point;
+}
 void Carrier::get_status() {
-  std::cout << "Aircraft count: " << carried_aircrafts.size() << ", Ammo Storage: " << ammo_storage << ", Total damage: " << get_total_damage() << std::endl;
-  std::cout << "Aircrafts: " << std::endl;
-  for (int i = 0; i < carried_aircrafts.size(); i++) {
-    std::cout << carried_aircrafts[i]->get_status() << std::endl;
+  if (health_point <= 0) {
+    std::cout << "It's dead, Jim :(" << std::endl;
+  } else {
+    std::cout << "Aircraft count: " << carried_aircrafts.size() << ", Ammo Storage: " << ammo_storage << ", Total damage: " << get_total_damage() << std::endl;
+    std::cout << "Aircrafts: " << std::endl;
+    for (int i = 0; i < carried_aircrafts.size(); i++) {
+      std::cout << carried_aircrafts[i]->get_status() << std::endl;
+    }
+    std::cout << std::endl;
   }
-  std::cout << std::endl;
 }

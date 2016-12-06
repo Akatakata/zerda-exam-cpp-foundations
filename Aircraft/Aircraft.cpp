@@ -40,7 +40,7 @@ int Aircraft::get_ammo_amount() {
   return ammo_amount;
 }
 
-std::string Aircraft::get_status() { // ammo amount always 0 ????
+std::string Aircraft::get_status() {
   return "Type " + type + ", Ammo: " + std::to_string(get_ammo_amount()) + ", Base Damage : "
     + std::to_string(base_damage) + ", All Damage: " + std::to_string(calculate_damage());
 }
