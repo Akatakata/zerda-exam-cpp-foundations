@@ -27,6 +27,9 @@
     <ClCompile Include="F35.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Carrier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aircraft.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="F35.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Carrier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

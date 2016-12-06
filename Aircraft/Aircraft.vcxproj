@@ -147,12 +147,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Aircraft.cpp" />
+    <ClCompile Include="Carrier.cpp" />
     <ClCompile Include="F16.cpp" />
     <ClCompile Include="F35.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aircraft.h" />
+    <ClInclude Include="Carrier.h" />
     <ClInclude Include="F16.h" />
     <ClInclude Include="F35.h" />
   </ItemGroup>
