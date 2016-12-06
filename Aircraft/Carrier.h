@@ -15,6 +15,11 @@ public:
   Carrier(int ammo_to_store, int health_point);
   ~Carrier();
   void add_aircraft(std::string aircraft);
+  void fill();
+  int get_total_damage();
+  void shoot();
+  void fight(Carrier& carrier_to_fight);
+  void get_status();
 };
 
 #endif

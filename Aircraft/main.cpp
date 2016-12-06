@@ -5,9 +5,19 @@
 #include "F35.h"
 
 int main() {
-  int ammo_rack = 44;
-  Carrier carrier(200, 5000);
-  carrier.add_aircraft("F36");
+  Carrier carrier1(200, 800);
+  carrier1.add_aircraft("F36");
+  carrier1.add_aircraft("F35");
+  carrier1.add_aircraft("F16");
+
+  Carrier carrier2(120, 300);
+  carrier2.add_aircraft("F35");
+  carrier2.add_aircraft("F16");
+
+  carrier1.fill();
+  carrier1.get_status();
+  carrier2.fill();
+  carrier2.get_status();
 
   /*
   std::cout << "refill" << std::endl;

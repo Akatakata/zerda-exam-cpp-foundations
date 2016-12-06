@@ -13,6 +13,7 @@ public:
   Aircraft();
   ~Aircraft();
   void reset_ammo_amount();
+  int calculate_damage();
   int fight();
   void refill(int& ammo_in_storage);
   std::string get_type();

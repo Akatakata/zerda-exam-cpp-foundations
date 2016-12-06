@@ -11,8 +11,13 @@ void Aircraft::reset_ammo_amount() {
   ammo_amount = 0;
 }
 
+int Aircraft::calculate_damage() {
+  int possible_damage = base_damage * ammo_amount;
+  return possible_damage;
+}
+
 int Aircraft::fight() {
-  int damage = base_damage * ammo_amount;
+  int damage = calculate_damage();
   reset_ammo_amount();
   return damage;
 }
@@ -37,5 +42,5 @@ int Aircraft::get_ammo_amount() {
 
 std::string Aircraft::get_status() { // ammo amount always 0 ????
   return "Type " + type + ", Ammo: " + std::to_string(get_ammo_amount()) + ", Base Damage : "
-    + std::to_string(base_damage) + ", All Damage: " + std::to_string(fight());
+    + std::to_string(base_damage) + ", All Damage: " + std::to_string(calculate_damage());
 }
