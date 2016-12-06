@@ -16,6 +16,8 @@ public:
   int fight();
   void refill(int& ammo_in_storage);
   std::string get_type();
+  std::string get_status();
+  int get_ammo_amount();
 };
 
 #endif

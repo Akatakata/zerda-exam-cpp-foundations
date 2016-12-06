@@ -1,6 +1,7 @@
 #include "Aircraft.h"
-
-Aircraft::Aircraft() : ammo_amount(0) {
+#include <string>
+Aircraft::Aircraft() {
+  ammo_amount = 0;
 }
 
 Aircraft::~Aircraft() {
@@ -28,4 +29,13 @@ void Aircraft::refill(int& ammo_in_storage) {
 
 std::string Aircraft::get_type() {
   return type;
+}
+
+int Aircraft::get_ammo_amount() {
+  return ammo_amount;
+}
+
+std::string Aircraft::get_status() { // ammo amount always 0 ????
+  return "Type " + type + ", Ammo: " + std::to_string(get_ammo_amount()) + ", Base Damage : "
+    + std::to_string(base_damage) + ", All Damage: " + std::to_string(fight());
 }
