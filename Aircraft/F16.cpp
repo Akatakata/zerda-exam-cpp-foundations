@@ -3,6 +3,7 @@
 F16::F16() : Aircraft() {
   base_damage = 30;
   max_ammo = 8;
+  type = "F16";
 }
 
 F16::~F16() {

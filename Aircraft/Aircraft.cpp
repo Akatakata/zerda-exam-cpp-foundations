@@ -25,3 +25,7 @@ void Aircraft::refill(int& ammo_in_storage) {
     ammo_in_storage = 0;
   }
 }
+
+std::string Aircraft::get_type() {
+  return type;
+}
