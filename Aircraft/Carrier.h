@@ -15,6 +15,9 @@ public:
   Carrier(int ammo_to_store, int health_point);
   ~Carrier();
   void add_aircraft(std::string aircraft);
+  int get_ammo_amount_for_all();
+  bool is_ammo_enough();
+  void prioritize_aircrafts();
   void fill();
   int get_total_damage();
   void shoot();
